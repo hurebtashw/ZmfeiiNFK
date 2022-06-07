@@ -9,7 +9,6 @@ info:
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}/network-login/"
 
     matchers-condition: and
     matchers:
@@ -26,7 +25,6 @@ requests:
 
     extractors:
       - type: regex
-        part: body
         group: 1
         regex:
           - "</sup> System Manager ([a-z0-9.]+)</h1>"
